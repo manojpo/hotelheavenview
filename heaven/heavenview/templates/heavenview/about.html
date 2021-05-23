@@ -1,0 +1,174 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>About Us</title>
+{% endblock %}
+{% block content %}
+<style>
+
+    .first-part {
+        margin-top: 80px;
+    }
+    .images{
+        border-radius: 15px;
+    }
+    img:hover{
+        filter: brightness(70%);
+        transition: .5s;
+    }
+
+    .hi{
+        border-radius:1%;
+    }
+
+
+
+
+    .abt{
+        text-align: center;
+        font-family: "Calisto MT";
+        font-size: 50px;
+        animation:zoomInDown;
+        animation-duration:1.5s;
+        font-weight: bold;
+
+    }
+
+    .first-part{
+        animation: zoomInDown;
+        animation-duration: 2s;
+    }
+    .hi{
+        background: #E55D87;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+    }
+
+</style>
+
+
+    <div class="container-fluid abt ">
+        <i class="fab fa-angellist" aria-hidden="true"></i> WE ARE HERE FOR YOU TO SAY ABOUT US <i class="fab fa-angellist" aria-hidden="true"></i>
+    </div>
+
+
+
+
+<div class="container-fluid bg-light">
+<div class="container first-part">
+    <div class="row hi ">
+        <span class="col-md-6">
+            <img src="{% static 'images/about1.jpg' %}" class="img-fluid shadow images" >
+        </span>
+        <span class="col-md-6">
+            <h2 class="heading-section">Kitchen</h2>
+             <i class="fas fa-quote-left"> </i><br><br>
+                    The kitchens were the hues of light upon cloud,
+                    of the kinds of creams and greys that soothed.
+                    And so the blues of dishes and the rich browns
+                    well cared for woods became as welcome musical
+                    notes upon a score.Our kitchens were the heart
+                    of our homes, the source of the good aromas that
+                    brought the best of family sprits to life.
+        </span>
+
+    </div>
+</div>
+
+<div class="container first-part">
+    <div class="row hi ">
+        <span class="col-md-6">
+            <h2 class="heading-section">Room Services</h2>
+             <i class="fas fa-quote-left"> </i><br><br>
+                Are you excited for the holiday and spend
+                your precious time here in baglung? Enjoy our hospility and stay for a night.
+                Sweet night with good sleep.
+                The colours of our rooms spoke of ocean,
+                wave-kissed land and rock. Yet they sang
+                of movement of the water, its sound and aroma.
+                They kept alive the kind of memories that keep me well anchored.
+
+        </span>
+        <span class="col-md-6">
+            <img src="{% static 'images/ff.jpg' %}" class="img-fluid shadow images" >
+        </span>
+    </div>
+</div>
+<div class="container first-part">
+    <div class="row hi ">
+        <span class="col-md-6">
+            <img src="{% static 'images/about3.jpg' %}" class="img-fluid shadow images" >
+        </span>
+        <span class="col-md-6">
+            <h2 class="heading-section">Customer Service</h2>
+             <i class="fas fa-quote-left"> </i><br><br>
+
+                    Guests of the Holiday Emerald are amazed
+                    at how genuinely kind their staff is. From
+                    thoughtful greetings upon entering the lobby
+                    to personally following up on special requests
+                    like restaurant recommendations, the staff at
+                    Hotel mountain feel more like friends than employees.
+        </span>
+
+    </div>
+</div>
+
+
+<div class="container first-part">
+    <div class="row hi ">
+        <span class="col-md-6">
+            <h2 class="sub-heading">Staff</h2>
+             <i class="fas fa-quote-left"> </i><br><br>
+                   I think we all need a sense of society,
+                    of knowing folks, of familiar faces and
+                    a degree of predictability... of stability.
+                    Going to my favourite cafe, that tiny restaurant,
+                    was my way of having that in my life. There are
+                    times when friends are distant, family too,
+                    and going there for a coffee gave me what my
+                    soul needed.
+
+        </span>
+        <span class="col-md-6">
+            <img src="{% static 'images/about4.jpg' %}" class="img-fluid shadow images" >
+        </span>
+
+    </div>
+</div>
+<br>
+</div>
+
+
+
+
+
+<div class="site-hero overlay" alt="Responsive image"
+     data-stellar-background-ratio="0.5"
+     style="background:url({% static 'images/about6.jpg'%})  center/cover; ">
+
+    <div class="container-fluid">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-12 text-center">
+        <div class="mb-5 element-animate fadeInUp element-animated">
+            <h1 style="color:wheat">Are you know ready for Booking</h1>
+                <p style="color:paleturquoise">Most luxury and comfortable rooms</p>
+                    <p><a href="booking" class="btn btn-outline-warning btn-lg font-weight-bold">Book Now</a></p>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

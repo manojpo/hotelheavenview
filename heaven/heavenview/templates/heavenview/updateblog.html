@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+
+<style>
+    body {
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+</style>
+
+
+
+<div style="text-align: center;
+              display: flex;
+              justify-content: center;
+               align-items: center">
+
+          <div class="col-md-12 mt-5 col-sm-6 mb-5"><a href="{% url 'blog' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adblog.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0" style="color: #bd2130">Update Blog</h5><span class="small text-uppercase text-muted" style="color: #bd2130">Hey admin wana update blog</span>
+
+            </div>
+        </a>
+        </div>
+</div>
+
+
+</div>
+
+
+<!--<div style="border:solid 2px #d16ba5" class="m-5 pt-5">-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <form method="post" enctype="multipart/form-data">-->
+<!--      {% csrf_token %}-->
+<!--        {{ form.media }}-->
+<!--      {{ form|crispy}}-->
+<!--      <button type="submit" class="btn-outline-warning">Submit</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+<div class="row">
+<div class="container col-md-6 card mb-4 mt-2 left top bg-light shadow-lg">
+
+    <h1><p style="text-align: center; color: #bd2130; font-family: sans-serif" >Update Blog</p></h1>
+         <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.media }}
+        <div class="col-md-12">
+            {{ form.name|as_crispy_field }}
+        </div>
+        <div class="col-md-12">
+            {{ form.content|as_crispy_field }}
+        </div>
+        <div class="col-md-12">
+
+                {{ form.image|as_crispy_field }}
+
+        </div>
+
+
+             <p style="font-family: sans-serif; text-align: center"> <button class="btn btn-danger" onclick="return confirm('are you sure to update the blog?')" type="submit"> Update </button></p>
+         </form>
+    </div>
+
+    <div class="container col-md-6 card mb-4 mt-2 left top bg-light shadow-lg">
+        <a style="text-align: center"  class="mt-5">  <img src="{{ blog.image_URL }}" alt="" class="img-thumbnail"> </a>
+    <p style="text-align: center; font-family: 'Calisto MT'" > Update you Blog image</p>
+    </div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+{% endblock %}

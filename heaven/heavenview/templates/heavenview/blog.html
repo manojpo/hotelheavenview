@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Blog</title>
+{% endblock %}
+{% block content %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+<section class='header'>
+
+    <video autoplay loop class="video-background embed-responsive" muted plays-inline>
+        <source src="{% static 'images/video.webm'%}" type="video/mp4">
+    </video>
+</section>
+
+
+<section>
+<div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col-md-12 heading-wrap text-center">
+            <h4 class="sub-heading mt-5">Enjoy your Visit </h4>
+                <h2 class="heading" style="font-family:ui-serif;">Hotel Heaven View International Blogs</h2>
+        </div>
+    </div>
+</div>
+<section class="section-cover" data-stellar-background-ratio="0.5" style="background:url({% static 'images/blog.jpg'%}) center center/cover;">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center intro">
+            <div class="col-md-9 text-center element-animate">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LTseTg48568?start=6" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+<div class="places container mt-5 mb-4">
+  {% for blog in blogs %}
+  <div class="pcards animate__animated animate__fadeInUp mt-5">
+    <div class="">
+      <img src="{{blog.image_URL}}" alt="" class="">
+    </div>
+    <div class="pl-3 pt-5 ptext container-fluid">
+      <h1>{{ blog.name }}</h1>
+      <p class="pt-2 pl-2">{{ blog.content }}</p>
+      <a href="{% url 'DetailBlogView' blog.pk %}" class="rm"
+        ><button type="submit" class="animate__animated animate__fadeInLeftBig">
+          See More
+        </button></a
+      >
+    </div>
+  </div>
+  {% endfor %}
+</div>
+      <div id="bar">
+      <div>
+      </div>
+    </div>
+  <div class="middle">
+    <div class="counting-sec">
+      <div class="inner-width">
+        <div class="col">
+          <i class="fas fa-procedures fa-3x"></i>
+          <div class="num">120</div>
+          Our Rooms
+        </div>
+
+        <div class="col">
+          <i class="fas fa-user fa-3x"></i>
+          <div class="num">201</div>
+          Our staff
+        </div>
+
+        <div class="col">
+          <i class="fas fa-user-friends fa-3x"></i>
+
+          <div class="num">9293</div>
+          Visitors
+        </div>
+
+        <div class="col">
+        <i class="fas fa-id-card fa-3x"></i>
+
+          <div class="num">87</div>
+          Booking on this yeae
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(".num").counterUp({delay:10,time:1000});
+  </script>
+
+
+
+      <div class="ptrs">
+        <h2 style="text-align: center">OUR <span style="color: #20c997">Founders</span></h2>
+      </div>
+      <div class="ptr container-fluid mb-5 mt-4">
+        <div class="ptrr">
+          <img src="{% static 'images/c7.jpg' %}" alt="" class="mt-3">
+          <div>
+            <h3 class="pt-3 pb-3">Paul McCartney</h3>
+          </div>
+          <div class="pl-4">
+            <p>Hey Jude, don't make it bad.
+Take a sad song and make it better.
+Remember to let her into your heart,
+Then you can start to make it better.
+Hey Jude, don't be afraid.
+You were made to go out and get her.
+The minute you let her under your skin,
+              Then you begin to make it better.
+            And anytime you feel the pain, hey Jude, refrain,
+Don't carry the world upon your shoulders.
+For well you know that it's a fool who plays it cool
+By making his world a little colder.
+Hey Jude, don't let me down.
+You have found her, now go and get her.
+Remember to let her into your heart,
+Then you can start to make it better.</p>
+          </div>
+        </div>
+        <div class="ptrr">
+          <img src="{% static 'images/c5.jpg' %}" alt="" class="mt-3">
+          <div>
+            <h3 class="pt-3 pb-3">Jim Morrison </h3>
+          </div>
+          <div class="pl-4">
+
+            <p>Riders on the storm
+Riders on the storm
+Into this house we're born
+Into this world we're thrown
+Like a dog without a bone
+An actor out alone
+Riders on the storm
+There's a killer on the road
+His brain is squirmin' like a toad
+Take a long holiday
+Let your children play
+If ya give this man a ride
+Sweet family will die
+Killer on the road, yeah
+Girl, ya gotta love your man
+Girl, ya gotta love your man
+Take him by the hand
+Make him understand
+The world on you depends
+Our life will never end
+Gotta love your man, yeah Riders on the storm
+Riders on the storm
+Into this house we're born
+Into this world we're thrown
+
+
+              </p>
+          </div>
+        </div>
+        <div class="ptrr">
+          <img src="{% static 'images/c6.jpg' %}" alt="" class="mt-3">
+          <div>
+            <h3 class="pt-3 pb-3">John Lennon</h3>
+          </div>
+          <div class="pl-4">
+            <p class="">I was dreaming of the past
+And my heart was beating fast
+I began to lose control
+I began to lose control
+I didn't mean to hurt you
+I'm sorry that I made you cry
+Oh my I didn't want to hurt you
+I'm just a jealous guy
+I was feeling insecure
+You might not love me anymore
+I was shivering inside
+I was shivering inside
+Oh I didn't mean to hurt you
+I'm sorry that I made you cry
+Oh my I didn't want to hurt you
+I'm just a jealous guy
+I didn't mean to hurt you
+I'm sorry that I made you cry
+Oh my I didn't want to hurt you
+I'm just a jealous guy
+I was trying to catch your eyes
+Thought that you was trying to hide
+I was swallowing my pain
+
+</p>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+
+
+
+    <style>
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.middle{
+  width: 100%;
+
+}
+.counting-sec{
+  padding: 40px 0;
+  width: 100%;
+  background: #833ab4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.col{
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col i{
+  font-size: 40px;
+  color: #333;
+}
+.num{
+  font-size: 40px;
+  margin: 20px 0;
+
+
+}
+
+
+
+  #bar{
+
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 5px;
+  background: #6f42c1;
+  overflow: hidden;
+}
+#bar div::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: #4c8bf5;
+  animation: Line1 2100ms cubic-bezier(0.65, 0.81, 0.73, 0.4) infinite;
+}
+@keyframes Line1 {
+  0%{
+    left: -35%;
+    right: 100%;
+  }
+  60%, 100%{
+    left: 100%;
+    right: -90%;
+  }
+}
+#bar div:after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #4c8bf5;
+  animation: Line2 2100ms cubic-bezier(0.16, 0.84, 0.44, 1) infinite;
+  animation-delay: 1150ms;
+}
+@keyframes Line2 {
+  0%{
+    left: -200%;
+    right: 100%;
+  }
+  60%, 100%{
+    left: 107%;
+    right: -8%;
+  }
+}
+
+.ptr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.ptr img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.ptrr {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+.ptr .ptrr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/*      form css*/
+
+      .places {
+    padding-left: 8px;
+  }
+
+      .pcards {
+  display: flex;
+background: #B993D6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  border-radius: 10px;
+}
+      .ptext {
+  background: rgba(0, 0, 0, 0.6);
+  border: rgba(0, 0, 0, 0.6) solid 1px;
+  border-radius: 0 10px 10px 0;
+}
+
+
+  .pcards img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px 0px 0 10px;
+  }
+
+
+
+
+  .ptext h1 {
+    font-size: 24px;
+  }
+
+      .rm button {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  border: lightgray 1px solid;
+  transition: 0.5s;
+  color: white;
+  margin-left: 80%;
+}
+.rm button:hover {
+  background: #B993D6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: #d9534f 1px solid;
+  color: white;
+  transition: 0.5s;
+}
+
+
+</style>
+
+<!--</section>-->
+
+
+
+
+{% endblock %}
+

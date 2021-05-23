@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    th{
+ background: #bd2130;
+    }
+</style>
+
+
+        <div class="row mb-5">
+            <div class="col-md-12 heading-wrap text-center">
+                <h4 class="sub-heading mt-5" >Contact Detail</h4>
+                <h2 class="heading" style="font-family: sans-serif; color: #bd2130">Messages from Guest</h2>
+            </div>
+        </div>
+
+
+
+ <div class="container mt-5 mb-4">
+        <div class="container he col-md-12  mb-4 mt-3 left top bg-light shadow-lg  ">
+
+
+    <table class="table table-striped table-dark table-bordered table-hover">
+
+        <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Email</th>
+            <th>Messages</th>
+            <th>Action</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+
+
+        {% for contact in contacts %}
+        <tr>
+
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.messages}}</td>
+            <td>
+                <a href="deleteContact/{{contact.id}}"
+                   onclick="return confirm('delete or not')"
+                    class="btn btn-danger">Delete </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div></div></div>
+<br><br><br><br>
+
+{% endblock %}

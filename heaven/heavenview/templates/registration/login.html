@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5 mb-4">
+        <div class="container he col-md-6 card mb-4 mt-3 left top bg-light shadow-lg ">
+    <div class="container login-box bg-light mt-5 mb-4 " >
+            <h1  style="text-align: center; color: darkblue; font-weight: bold"> User Login</h1>
+
+                <form method="post" class="container-fluid   mt-5" >
+                {% csrf_token %}
+                {{ form.media }}
+                    {{form|crispy}}
+                    <p style="text-align: center"> <button type="submit" class="btn btn-outline-success ml-lg-5 mb-2" >Log In</button></p><br>
+                    <p style="text-align: center">Create an account? <a href="{%url 'signup' %}" style="text-decoration: none">Sign Up</a></p>
+                 <p style="text-align: center; color: #6c757d">Copyright <span>&#169;</span> form 2021</span></p>
+                </form>
+    </div>
+        </div>
+    </div>
+<br>
+<br>
+<!--</div>-->
+<style>
+
+    body{
+        background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .he:hover{
+              z-index: 0.5;
+    transform: scale(1.05);
+
+    box-shadow: 0 25px 40px rgba(63,63,191,0);
+
+    }
+
+
+
+</style>
+
+
+
+{% endblock %}

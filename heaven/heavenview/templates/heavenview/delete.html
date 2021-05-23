@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+
+    <div class="container mt-5">
+        <div  class=" card col-md-12 mt-5 ">
+        <form method="POST" enctype="multipart/form-data">
+            <h3><a style="font-family: sans-serif; text-align: center">Are you sure you want to delete the Room?</a></h3>
+            <p style="font-family: sans-serif">Room Type: {{ room.type }}</p>
+            <P style="font-family: sans-serif">Room Code:{{room.code}}</P>
+            <p><img src="{{ room.image_url }}" alt=""> </p>
+            {% csrf_token %}
+             {{form.media}}
+
+           <p style="text-align: center"><button class="btn btn-danger mb-lg-5" type="submit" onclick="return confirm('Undo delete cannot be done!')">Delete</button>
+           </p></form>
+        </div>
+    </div>
+<br>
+<br>
+<br><br><br>
+<br>
+<br>
+<br>
+
+{% endblock  %}

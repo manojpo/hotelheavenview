@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<style>
+    body{
+        background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    }
+
+
+
+
+
+</style>
+
+
+
+
+
+<section>
+    <div class="border-primary">
+        <h1 style="text-align: center">Add New Rooms</h1>
+        <div class="he">
+        <div style="text-align: center" >
+
+     <div class=" ok col-xl-12 col-sm-12 mb-5"><a href="" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img id="hel" src="{%static 'images/addd.jpg'%}" alt="" width="100"  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Add Room</h5><span class="small text-uppercase text-muted">Add new rooms</span>
+
+            </div>
+        </a>
+        </div>
+</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.media}}
+                {{form|crispy}}
+            <button type="submit" style="color: white" class="btn-outline-info border-primary"> Submit </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{% endblock content %}

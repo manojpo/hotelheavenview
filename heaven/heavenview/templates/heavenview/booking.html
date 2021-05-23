@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Booking</title>
+{% endblock%}
+{% block content %}
+
+ <div class="container mt-4">
+        <div class="row mb-5">
+            <div class="col-md-12 heading-wrap text-center">
+                <h4 class="sub-heading">Our Rooms</h4>
+                <h2 class="heading">Our Luxury Rooms</h2>
+            </div>
+        </div>
+
+     <div class="container container-fluid bg-light">
+
+         <div class="row">
+                    {% for room in rooms %}
+                        <div class="col-md-4">
+
+                            <img class="img-thumbnail " style=" width:100%;   min-height:250px; max-height: 250px;" src="{{ room.image_URL }}">
+                            <div class="dabba prod">
+                                <h6><strong> Room Type: {{ room.type }}</strong></h6>
+                                <h6><strong>Code:{{room.code}}</strong></h6>
+                                        <ul class="room-specs">
+                        <li><span class=""><i class="fas fa-user-tie"></i></span>2 Guests</li>
+                        <li><span class=""><i class="fas fa-procedures"></i></span> 22 ft <sup>2</sup></li>
+                    </ul>
+                                <hr>
+                                <h4 style="display: inline-block;float: left"> Price:${{ room.price|floatformat:2 }}</h4> <br>
+                                <br>
+                                <button data-product={{ room.id }} data-action="add" class="btn btn-outline-info add-btn update-cart"><a href="{%url 'reserve'%}" style="text-decoration:none">
+                                    Book</a></button>
+                                <a class="btn btn-outline-success" href="{% url 'roomview' room.pk %}">View</a> <br> <br><br> <br><br>
+
+<!--                                <p class="text-justify">{{room.text}}</p>-->
+
+                            </div>
+                        </div>
+                    {% endfor %}
+               </div>
+         </div>
+     </div>
+
+ </div>
+
+<style>
+    .img-thumbnail:hover{
+      z-index: 0.5;
+    transform: scale(1.15);
+
+    box-shadow: 0 25px 40px rgba(63,63,191);
+    }
+</style>
+
+
+{% endblock content %}

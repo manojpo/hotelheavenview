@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %} {% block content%}
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="cra mt-5 container">-->
+<!--      <h2>Upload Data</h2>-->
+<!--    </div>-->
+<!--    <form method="post" enctype="multipart/form-data" class=" container sgnop mt-5">-->
+<!--      <div>-->
+<!--        {% csrf_token %}-->
+<!--          {{ form.media }}-->
+<!--          {{ form|crispy }}-->
+<!--        <div class="cra">-->
+<!--          <button type="submit">Submit</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      -->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<style>
+    body {
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+</style>
+
+<div class="container">
+<div class="container col-md-7 card mb-4 mt-3 left top bg-light shadow-lg">
+    <h1><p style="color: #bd2130; font-family: sans-serif; text-align: center">Add blog</p></h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+      {{form.media}}
+        <p style="text-align: center"> <button type="submit" class="btn btn-danger mt-4" onclick="return confirm('Are you sure to add this blog!!')"> Add Blog </button></p>
+    </form>
+  <br>
+</div>
+  <br>
+</div>
+
+
+{% endblock %}

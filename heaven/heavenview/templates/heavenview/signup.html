@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+
+{% block content %}
+<!--    <h2>Create Account</h2>-->
+<!--    <form method="post">-->
+<!--    {% csrf_token %}-->
+<!--    {{ form.as_p }}-->
+<!--    <button type="submit">Sign up</button>-->
+<!--    </form>-->
+
+<style>
+
+        body{background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+    }
+</style>
+
+
+ <div class="container mt-5 mb-4">
+        <div class="container he col-md-8 card mb-4 mt-3 left top bg-light shadow-lg  ">
+
+    <div class="container login-box bg-light mt-5 mb-4 " >
+
+            <h1  style="text-align: center; color: darkblue; font-weight: bold">Create Account</h1>
+
+
+             <h2 style="text-align: center">Create New account to sigin into website</h2>
+
+                <form method="post" class="container-fluid   mt-5" >
+                {% csrf_token %}
+                    {{form.media}}
+                    {{form|crispy}}
+
+
+
+                    <p style="text-align: center"> <button type="submit" class="btn btn-outline-success ml-lg-5">Sign Up</button></p>
+               <p style="text-align: center"> Already have account? <a href="{% url 'login'%}" style="text-decoration: #82ccdd"> Login</a></p>
+               <p style="text-align: center; color: #6c757d">Copyright <span>&#169;</span>signup form 2021</span></p>
+
+                </form>
+
+
+
+    </div>
+
+
+</div>
+ </div>
+
+
+{% endblock %}

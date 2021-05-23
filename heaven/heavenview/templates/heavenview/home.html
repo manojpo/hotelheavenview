@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Home</title>
+{% endblock%}
+{% block content%}
+{% load static%}
+ <link rel="stylesheet"
+          href="{% static 'css/font-awesome.min.css' %}">
+<section class="site-hero overlay embed-responsive" alt="Responsive image" data-stellar-background-ratio="0.5" style="background:url({% static 'images/y.jpg'%})  center/cover; ">
+
+    <div class="container-fluid">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-12 text-center">
+        <div class="mb-5 element-animate fadeInUp element-animated">
+            <h1 style="color:red; font-family:fantasy;">Welcome To Our Hotel Heaven View International</h1>
+                <p style="font-family:cursive;">Discover our world's #1 rooms and hospality.</p>
+                    <p><a href="{% url "booking" %}" class="btn btn-outline-success btn-lg font-weight-bold">Book Now</a></p>
+        </div>
+        </div>
+        </div>
+    </div>
+
+</section>
+<!--first banner end -->
+<section style="margin:50px 50px  !important;"  >
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="heading-wrap text-center element-animate fadeInUp element-animated">
+                    <h4 class="sub-heading " style="color:lightblue">Stay with us with sound environment</h4>
+                    <h2 class="heading" style="color:#007bff">Stay and Relax</h2>
+                        <p class="mb-5">The holidays were about being together, we stopped the commercial gifts thing. We did what made us feel whole and renamed them whole-i-days. The focus was on how we all were as individuals and as a family. It was about community and having the will to see the real state of the world and the work that needed doing for others. It felt right. No more holey-days.</p>
+                            <p><a href="{% url 'about' %}" class="btn btn-primary btn-sm">More About Us</a></p>
+                </div>
+            </div>
+        <div class="col-md-1"></div>
+
+    <div class="col-md-6" ><a href="{%url 'booking'%}" >
+        <img src="{% static 'images/ab.jpg'%}" alt="Responsive image"  class="rounded img-fluid mr-5"></a>
+    </div>
+        </div>
+    </div>
+</section>
+
+
+<!--jczcjsdhcs-->
+
+<section class="site-section bg-light">
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-md-12 heading-wrap text-center">
+                <h4 class="sub-heading">Our Luxury Rooms</h4>
+                <h2 class="heading">Featured Rooms</h2>
+            </div>
+        </div>
+
+
+
+<div class="row ">
+<div class="col-md-7">
+<div class="media d-block room mb-0">
+<figure>
+<img src="{% static 'images/room12.jpg'%}" alt="Generic placeholder image" class=" rounded img-fluid  ">
+<div class="overlap-text">
+<span>
+Featured Room
+<span class=""><i class="fas fa-star"></i></span>
+<span class=""><i class="fas fa-star"></i></span>
+<span class=""><i class="fas fa-star"></i></span>
+</span>
+</div>
+</figure>
+
+
+<div class="media-body">
+<h3 class="mt-0"><a href="{%url 'booking'%}" style="text-decoration: none">Presidential Room</a></h3>
+<ul class="room-specs">
+<li><span class=""><i class="fas fa-user-tie"></i></span>2 Guests</li>
+<li><span class=""><i class="fas fa-dollar-sign"></i></span>100</li>
+
+    <li><span class=""><i class="fas fa-procedures"></i></span> 22 ft <sup>2</sup></li>
+</ul>
+<p>Book now and grab a luxury room at hotel heaven view international and relax with our luxury rooms</p>
+<p><a href="{% url 'booking'%}" class="btn btn-primary btn-sm">Book Now From $20</a></p>
+</div>
+</div>
+</div>
+<div class="col-md-5 room-thumbnail-absolute">
+<a href="{%url 'booking'%}" class="media d-block room bg first-room" style="background-image: url({% static 'images/g.jpg'%});">
+
+<div class="overlap-text">
+<span>
+
+Hotel Room
+<span class=""><i class="fas fa-star"></i></span>
+<span class=""><i class="fas fa-star"></i></span>
+ <span class=""><i class="fas fa-star"></i></span>
+<span class="pricing-from">from $100</span>
+</span>
+
+</div>
+</a>
+
+<a href="{%url 'booking'%}" class="media d-block room bg second-room" style="background-image: url({% static 'images/ff.jpg'%}); ">
+<div class="overlap-text">
+<span>
+Hotel Room
+<span class=""><i class="fas fa-star"></i></span>
+<span class=""><i class="fas fa-star"></i></span>
+<span class=""><i class="fas fa-star"></i></span>
+</span>
+<span class="pricing-from">
+from $100
+</span>
+</div>
+
+</a>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+
+
+<section>
+<div class="container-fluid">
+<div class="row mb-5">
+<div class="col-md-12 heading-wrap text-center">
+<h4 class="sub-heading mt-5">Enjoy your Visit </h4>
+<h2 class="heading" style="font-family:ui-serif;">Just listen to Pink FLoyd and Relax</h2>
+</div>
+</div>
+</div>
+
+<section class="section-cover" data-stellar-background-ratio="0.5" style="background:url({% static 'images/g.jpg'%}) center center/cover;">
+<div class="container-fluid">
+<div class="row justify-content-center align-items-center intro">
+<div class="col-md-9 text-center element-animate">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LTseTg48568?start=6" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+
+
+
+<!--....slider.....-->
+<section class="site-section bg-light">
+<div class="container-fluid">
+<div class="row mb-5">
+<div class="col-md-12 heading-wrap text-center">
+<h4 class="sub-heading">You Might Like</h4>
+<h2 class="heading">Make yourself Comfortable</h2>
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="carouselExampleIndicators"  class="carousel slide pointer-event " data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+  </ol>
+
+
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img class="d-block w-100  img-fluid  " src="{% static 'images/21.jpg'%}" alt="First slide" >
+
+         <div class="carousel-caption d-none d-md-block">
+             <h6>Hotel Mountain view</h6>
+             <h1>Welcome</h1>
+             <div class="booking"><a href="{% url 'blog'%}" ><span class="far fa-bookmark fa-4x"></span></a></div>
+
+        </div>
+    </div>
+
+
+    <div class="carousel-item active">
+      <img class="d-block w-100   img-fluid " src="{% static 'images/25.jpg'%}" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+             <h6>Hotel Mountain view</h6>
+             <h1>Welcome</h1>
+             <div class="booking"><a href="{%url 'blog'%}" ><span class="far fa-bookmark fa-4x"></span></a></div>
+        </div>
+
+
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 img-fluid  " src="{% static 'images/home1.jpg'%}" alt="Third slide">
+         <div class="carousel-caption d-none d-md-block">
+              <h6>Hotel Mountain View</h6>
+             <h1>Welcome</h1>
+             <div class="booking"><a href="{%url 'blog'%}" ><span class="far fa-bookmark fa-4x"></span></a></div>
+        </div>
+    </div>
+  </div>
+
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<!--slider finished-->
+
+
+
+
+
+
+<!--blog part-->
+<section class="site-section bg-light">
+<div class="container">
+<div class="row mb-5">
+<div class="col-md-12 heading-wrap text-center">
+<h4 class="sub-heading">Might Help You</h4>
+<h2 class="heading">Your Concern</h2>
+</div>
+</div>
+
+
+
+<!--    content suru-->
+
+<!--    first block-->
+<div class="row ">
+<div class="col-md-4">
+<div class="post-entry">
+<img src="{% static 'images/ff.jpg'%}" alt="Image placeholder" class="img-fluid">
+<div class="body-text">
+<div class="category"> About Rooms</div>
+<h3 class="mb-4"><a href="{%url 'about'%}" style="text-decoration: none">New Rooms</a></h3>
+<p class="mb-4">
+                The colours of our rooms spoke of ocean,
+                wave-kissed land and rock. Yet they sang
+                of movement of the water, its sound and aroma.
+                They kept alive the kind of memories that keep me well anchored and assertive
+        </p>
+<p><a href="contact" class="btn btn-primary  btn-sm">Contact US</a></p>
+</div>
+</div>
+</div>
+
+
+<!--    second block--->
+<div class="col-md-4">
+<div class="post-entry">
+<img src="{%static 'images/man.jpg'%}" alt="Image placeholder" class="img-fluid">
+<div class="body-text">
+<div class="category">About Staff</div>
+<h3 class="mb-4"><a href="{%url 'about'%}" style="text-decoration: none">New Staff Added</a></h3>
+<p class="mb-4">
+                    Going to my favourite cafe,and  that tiny restaurant,
+                    was my way of having that in my life. There are
+                    times when friends are distant, family too,
+                    and going there for a coffee gave me what my
+                    soul Enjoying it peacefully
+</p>
+<p><a href="" class="btn btn-primary  btn-sm">Contact US</a></p>
+</div>
+</div>
+</div>
+<!--    third block-->
+<div class="col-md-4">
+<div class="post-entry">
+<img src="{%static 'images/pool.jpg'%}" alt="Image placeholder" class="img-fluid">
+<div class="body-text">
+<div class="category">More services</div>
+<h3 class="mb-4"><a href="{%url 'about'%}" style="text-decoration:none">Big Rooms for All</a></h3>
+<p class="mb-4">The holidays were about being together, we stopped the commercial gifts thing. We did what made us feel whole and renamed them whole-i-days. The focus was on how we all were as family and individuals </p>
+<p><a href="" class="btn btn-primary btn-sm">Contact US</a></p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

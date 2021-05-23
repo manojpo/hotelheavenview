@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<style>
+    p{
+        color: #bd2130;
+        font-family: sans-serif;
+
+    }
+
+
+body{background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+
+
+
+
+</style>
+
+    <div class="border-primary mt-4">
+
+
+        <div class="he ">
+        <div style="text-align: center" >
+
+     <div class=" ok col-xl-12 col-sm-12 mb-5"><a href="" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img id="hel" src="{%static 'images/addd.jpg'%}" alt="" width="100"  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0" style="font-family: sans-serif;color: #bd2130">Hello Admin</h5><span class="small text-uppercase text-muted">Update the rooms</span>
+
+            </div>
+        </a>
+        </div>
+</div>
+        </div>
+    </div>
+
+<div class="container">
+
+<div class="row">
+
+<div class="container col-md-6 card mb-4 mt-2 left top bg-light shadow-lg">
+
+    <h1><p style="text-align: center">Update Rooms</p></h1>
+         <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.media }}
+        <div class="col-md-12">
+            {{ form.type|as_crispy_field }}
+        </div>
+        <div class="col-md-12">
+            {{ form.price|as_crispy_field }}
+        </div>
+        <div class="col-md-12">
+
+                {{ form.image|as_crispy_field }}
+
+        </div>
+         <div class="col-md-12">
+            {{ form.code|as_crispy_field }}
+        </div>
+
+             <p style="text-align: center">  <button class="btn btn-outline-success  " type="submit" onclick="return confirm('Are you sure want to update this room?')" > Update </button></p>
+         </form>
+    </div>
+    <div class="container col-md-6 card mb-4 mt-2  left top bg-light shadow-lg">
+        <a style="text-align: center"  class="mt-5">  <img src="{{ room.image_URL }}" alt="" class="img-thumbnail"> </a>
+    <p style="text-align: center; font-family: 'Calisto MT'"> Update you rooms From here</p>
+    </div>
+
+
+</div>
+</div>
+</div>
+{% endblock content %}

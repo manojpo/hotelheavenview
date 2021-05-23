@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+
+  .fulin {
+  display: flex;
+}
+.fulin img {
+    height: 300px;
+    width: 500px;
+    border-radius: 5%;
+}
+
+  body {
+      background-image: radial-gradient(circle, #d16b9c, #c976b2, #bc82c5, #ad8ed4, #9c9adf, #8ca7eb, #7ab3f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+
+  }
+
+</style>
+
+
+
+
+
+<div style="text-align: center;
+              display: flex;
+              justify-content: center;
+               align-items: center">
+
+          <div class="col-xl-12 col-sm-6 mt-4 mb-5"><a href="{% url 'blog' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adblog.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0" style="color: #bd2130">View Blog</h5><span class="small text-uppercase text-muted" style="color: #bd2130">Detail view of blog</span>
+
+            </div>
+        </a>
+        </div>
+</div>
+</div>
+
+
+ <div class="container mt-5 mb-4">
+        <div class="container he col-xl-12 card mb-4 mt-3 left top bg-light shadow-lg  ">
+
+<div class="fulin container mt-5">
+  <p><img src="{{ blog.image_URL }}" alt="" class="img-fluid"></p>
+  <div class="txt pl-5">
+    <h1><a>{{ object.name }}</a></h1>
+    <p ><a >{{ object.content }}</a></p>
+
+  </div>
+
+
+
+
+</div>
+
+<div>
+
+  {% if user.is_staff %}
+  <div style="text-align: center" class="m-2">
+  <a href="{% url 'updateblog' blog.pk %}"><button class="btn btn-success">Update</button></a>
+  <a href="{% url 'deleteblog' blog.pk %}"><button class="btn btn-danger">Delete</button></a>
+  </div>
+  {% endif %}
+</div>
+</div>
+ </div>
+<br>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>admin</title>
+{% endblock %}
+{% block content %}
+<style>
+body {
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+</style>
+<div class="container py-5">
+    <div class="row text-center text-white">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">Admin Panel</h1>
+            <p class="lead mb-0">Hello admin want's to customise the website and view details</p>
+            <p class="lead"> OR Move to dashboard!!<a href="admindash" class="text-white" ><b>
+                <u>Dashboard</u></b></a>
+            </p>
+        </div>
+    </div>
+</div><!-- End -->
+<div class="container">
+    <div class="row text-center">
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5" ><a href="{%url 'AddBookingView' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img id="hey" src="{% static 'images/proom4.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Add Rooms</h5><span class="small text-uppercase text-muted">Adding the rooms</span>
+
+            </div>
+        </a>
+        </div><!-- End -->
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5"><a href="{%url 'booking' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img id="hel" src="{%static 'images/addd.jpg'%}" alt="" width="100"  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">View Room</h5><span class="small text-uppercase text-muted">Our Rooms</span>
+
+            </div>
+        </a>
+        </div><!-- End -->
+
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5"><a href="{%url 'get_Contact' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adcon.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Contact Query</h5><span class="small text-uppercase text-muted">Contact Form from Visitor</span>
+
+            </div>
+        </a>
+        </div><!-- End -->
+
+        <!-- Team item -->
+        <div class="col-xl-3 col-sm-6 mb-5"><a href="{%url 'get_Reserve' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adbook.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">See Booking</h5><span class="small text-uppercase text-muted">Booking done by guest</span>
+
+            </div>
+        </a>
+        </div><!-- End -->
+
+          <div class="col-xl-3 col-sm-6 mb-5"><a href="{% url 'CreateBlogView' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adblog.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Blog</h5><span class="small text-uppercase text-muted">Add New Blog</span>
+
+            </div>
+        </a>
+        </div>
+
+
+          <div class="col-xl-3 col-sm-6 mb-5"><a href="{% url 'blog' %}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adusblog.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">See Blog</h5><span class="small text-uppercase text-muted">User Blog lists</span>
+
+            </div>
+        </a>
+        </div>
+
+          <div class="col-xl-3 col-sm-6 mb-5"><a href="{% url 'index'%}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/adin.png'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Index</h5><span class="small text-uppercase text-muted">Index page</span>
+
+            </div>
+        </a>
+          </div>
+
+
+          <div class="col-xl-3 col-sm-6 mb-5"><a href="{% url 'get_Users'%}" style="text-decoration: none; color: black">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'images/c5.jpg'%}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">User Details</h5><span class="small text-uppercase text-muted">Users</span>
+
+            </div>
+        </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- {% if user.is_staff %}-->
+<!--         <a href="{% url 'AddBookingView' %}"><button class="btn btn-success"> Add </button></a>-->
+<!--    {% endif %}-->
+
+{% endblock %}

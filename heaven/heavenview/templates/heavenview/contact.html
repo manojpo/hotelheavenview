@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Contact US</title>
+{% endblock%}
+{% block content%}
+{% load static%}
+
+<section class="site-hero overlay" alt="Responsive image" data-stellar-background-ratio="0.5" style="background:url({% static 'images/contact4.jpg'%})  center/cover; ">
+    <div class="container-fluid">
+        <div class="row align-items-center site-hero-inner justify-content-center ">
+        <div class="col-md-12 text-center ">
+        <div class="mb-5 element-animate fadeInUp element-animated">
+
+            <h1 style="color:darkblue; font-family:cursive;" class="font-weight-bold"  >Welcome To Our Heaven View Internation Contact Center</h1>
+            <br><br><br><br><br><br><br><br><br>
+              <p style="font-family:cursive;">Discover our world's #1 rooms and hospality.</p>
+            <br><br><br><br><br><br><br><br>
+                    <p><a href="booking" class="btn btn-outline-primary btn-lg font-weight-bold">Book Now</a></p>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-5">Contact Form</h2>
+                <form class="" method="POST">
+                    {% csrf_token %}
+                      <div class="form-group">
+    <label for="name">Your Name</label>
+    <input name="name" type="text"  id="name" class="form-control" placeholder="Name">
+    <small id="" class="form-text text-muted">Your name should be remeber by our teams</small>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1"  placeholder="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="messages">Message</label>
+    <input name="messages" type="text" class="form-control" id="messages" placeholder="messages">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure to send a message?')">Submit</button>
+            </form>
+
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-5">
+<h3 class="mb-5">Contact Detail</h3>
+<p class="mb-5"><img src="{% static 'images/soc.jpg'%}" alt="" class="img-fluid"></p>
+<p>“Scepticism is the chastity of the intellect, and it is shameful to surrender it too soon or to the first comer: there is nobility in preserving it coolly and proudly through long youth, until at last, in the ripeness of instinct and discretion, it can be safely exchanged for fidelity and happiness.”
+    ― George Santayana</p>
+
+    <p>“We are loved way more by some of the people who have not contacted us in the last twelve or so months than we are loved by some of those who contact us every twelve or so days … or hours.”
+        ― Mokokoma Mokhonoana</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<div class="container-fluid ">
+<div class="cont">
+<i class="fas fa-child" aria-hidden="true"></i> Connect Us with Social Sites<i class="fas fa-child" aria-hidden="true"></i>
+
+</div>
+<div class="container-fluid bg-light">
+    <div class="row">
+
+        <div class="col-md-3 first-part  ">
+            <h2 class="heading-section"><a href="https://www.facebook.com/" style="text-decoration: none">Facebook</a>
+                <i class=" mt-5 fab fa-facebook  text-primary "> </i></h2><br><br>
+                  “Social media isn’t the end-all-be-all, but it offers marketers unparalleled opportunity to participate in relevant ways. It also provides a launch-pad for other marketing tactics. Social media is not an island. It’s a high-power engine on the larger marketing ship.”
+            <br>
+
+        </div>
+
+                <div class="col-md-3 first-part">
+            <h2 class="heading-section"><a href="https://www.youtube.com/" style="text-decoration: none; color: #fd1d1d">YouTube</a>
+                <i class=" mt-5 fab fa-youtube  text-danger "> </i></h2><br><br>
+                    Guests of the Holiday Emerald are amazed
+                    at how genuinely kind their staff is. From
+                    thoughtful greetings upon entering the lobby
+                    to personally following up on special requests
+                    like restaurant recommendations, the staff at
+                    Hotel mountain feel more like friends than employees.
+            <br>
+                </div>
+
+                    <div class="col-md-3 first-part">
+            <h2 class="heading-section"><a href="https://twitter.com/" style="color: #007bff;text-decoration: none">Twitter</a>
+                <i class=" mt-5 fab fa-twitter  text-primary "> </i></h2><br><br>
+                   “Social media is changing the way we communicate and the way we are perceived, both positively and negatively. Every time you post a photo or update your status, you are contributing to your own digital footprints and personal brand.”
+            <br>
+
+        </div>
+
+                <div class="col-md-3 first-part">
+            <h2 class="heading-section" href=""><a href="https://www.twitch.tv/" style="text-decoration: none; color: #6f42c1">Twitch</a>
+                <i class=" mt-5 fab fa-twitch" style="color: #6f42c1"> </i></h2><br><br>
+                    “Search is about figuring out what people are looking for when they enter keywords into their favorite search engine. Social media is what people are actually saying to each other; they’re telling us what they’re looking for. We, as marketers, should be able to fit it all together pretty nicely.”
+            <br>
+
+        </div>
+
+        </span>
+    </div>
+</div>
+</div>
+<br>
+<br>
+
+
+
+<section class="site-hero overlay" alt="Responsive image" data-stellar-background-ratio="0.5" style="background:url({% static 'images/contact2.png'%})  center/cover; ">
+
+</section>
+
+    <style>
+        .cont{
+        text-align: center;
+        font-family: fantasy;
+        font-size: 50px;
+        animation:flipInX;
+        animation-duration: 1.5s;
+
+
+        font-weight: bold;
+        color: #82ccdd;
+    }</style>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

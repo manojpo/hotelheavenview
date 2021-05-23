@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Admin-Dashboard</title>
+{% endblock %}
+{% block content %}
+<style>
+
+    .card:hover{
+
+        transform: scale(1.01);
+
+    box-shadow: 0 25px 40px rgba(244,67,244,0.2);
+    }
+    .card-body a{
+    text-decoration:none;
+    color:#fff;
+    }
+    .card-body a:hover{
+    color:orange;
+    }
+
+    body{
+        background-image: radial-gradient(circle, #d16b9c, #c976b2, #bc82c5, #ad8ed4, #9c9adf, #8ca7eb, #7ab3f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+    }
+</style>
+
+
+<div class="container py-5">
+    <div class="row text-center text-white">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">Admin Dashboard</h1>
+            <p class="lead mb-0">Hello admin want's to customise the website and view details</p>
+            <p class="lead"> Work done want's Move to dashboard!!<a href="adminpannel" class="text-white" ><b>
+                <u>Panel</u></b></a>
+            </p>
+        </div>
+    </div>
+</div><
+
+
+
+
+<div class="container">
+<!--    <h1><p style="text-align: center">Admin Dashboard</p></h1>-->
+<!--     <p class="lead mb-0" style="text-align: center">Hello admin want's to customise the website and view details</p>-->
+<!--            <p class="lead" style="text-align: center"> OR Move to dashboard!!<a href="admindash" class="text-white" ><b>-->
+<!--                <u>Website Index</u></b></a>-->
+<!--            </p>-->
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <h6 class="success_message py-3 px-1 my-2 text-center">{{message}}</h6>
+    {% endif %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR%}
+    <h6 class="error_message py-3 px-1 my-2 text-center">{{message}}</h6>
+    {% endif %}
+    {% endfor %}
+    <div class="row">
+        <div class="col">
+    <div class="card text-white bg-primary mb-3" style="max-width: 35rem;">
+        <div class="card-header text-center">Total Rooms</div>
+        <div class="card-body">
+            <a href="{% url 'booking' %}" style="text-decoration: none"><h1 class="card-title text-center">{{room}}</h1></a>
+        </div>
+    </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-warning mb-3" style="max-width: 35rem;">
+                <div class="card-header text-center">Total Blogs</div>
+                <div class="card-body">
+                    <a href="{% url 'blog' %}" style="text-decoration: none"> <h1 class="card-title text-center">{{blog}}</h1></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card text-white bg-success mb-3" style="max-width: 35rem;">
+                <div class="card-header text-center">Total Users</div>
+                <div class="card-body">
+                    <a href="getUsers" style="text-decoration: none"><h1 class="card-title text-center">{{user}}</h1></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-danger mb-3" style="max-width: 35rem;">
+                <div class="card-header text-center">Total Admins</div>
+                <div class="card-body">
+                    <h1 class="card-title text-center">{{admin}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

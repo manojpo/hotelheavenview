@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="container-fluid">
+        <h4><p style="text-align: center; color: #bd2130; font-family: sans-serif" class="mt-2">{{object.type}}:Room</p></h4>
+        <p style="text-align: center" ><a href="{% url 'reserve'%}"><img src="{{ room.image_URL }}" alt="" class="img-fluid img-thumbnail mt-1"></a></p>
+        <p style="text-align: center; font-family: sans-serif">Room code:{{ object.code }}</p>
+        <p style="text-align: center; font-family: sans-serif">Price:{{ object.price }}</p>
+        <p style="text-align: center; font-family: sans-serif">Room Type:{{ object.type}}</p>
+
+        {% if user.is_staff %}
+       <p style="text-align: center"> <a href="{% url 'update' room.pk %}"> <button class="btn btn-success mb-1"> Update </button></a>
+           <a href="{% url 'delete' room.pk %}"><button class="btn btn-danger mb-1"> Delete </button></a> </p>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

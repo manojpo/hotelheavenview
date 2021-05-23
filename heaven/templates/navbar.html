@@ -1,0 +1,116 @@
+
+{% load static%}
+
+
+
+<html lang="en">
+
+
+
+
+
+    <style>
+
+nav {
+    background: rgb(51, 3, 85);
+    background: linear-gradient(90deg, rgba(51, 3, 85, 0.9814814814814815) 5%, rgba(55, 6, 146, 1) 53%, rgba(142, 174, 189, 1) 87%);
+}
+    .butons{
+      border: 1px solid;
+      border-color: white;
+      border-radius: 10px;
+      margin-left: 10px;
+      background-color: transparent;
+    }
+
+
+  </style>
+
+
+
+<!--<img src="{% static 'images/log.png'%}" width="50" height="50" class="d-inline-block align-top" alt="">-->
+
+
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+      <p style="text-align: start" class="mr-2 ml-2"> <a class="navbar-brand" href="{% url 'index' %}" >  Hotel <span style="color: orange"><strong>Heaven View</strong></span> International</a></p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="navbar-nav ml-auto">
+
+          {% if user.is_authenticated %}
+
+
+
+               <li class="nav-item dropdown mr-5">
+        <a class="nav-link dropdown-toggle" href="#" id="navbrDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Settings <i class="fas fa-user-cog ml-1"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" >{{ user.username }}</a>
+          <a class="dropdown-item" href="password_change">Change Password</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+        </div>
+      </li>
+
+
+
+
+
+<!--           <li class="nav-item">-->
+<!--                <a class="btn btn-danger btn-sm mx-2 d-flex ml-5" href="profile">Profile</a>-->
+            {% else %}
+
+
+              <li  class="nav-item btns ml-2 mr-2"><button class="butons">
+                <a class="nav-link" href="{% url 'login' %}">Sign-in</a></button>
+              </li>
+              <li  class="nav-item btns ml-2 mr-2"><button class="butons"> <a class="nav-link" href="{% url 'signup' %}">Sign-up</a></button>
+
+              </li>
+          {% endif %}
+
+
+
+            {% if user.is_staff %}
+            <li class="nav-item dropdown mr-5">
+        <a class="nav-link dropdown-toggle mr-lg-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Action
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a  class="dropdown-item"  href="{% url 'admin' %}" style=" color: black">Admin Pannel</a>
+
+
+          <a class="dropdown-item" href="admindash">Admin Dashboard</a>
+        </div>
+      </li>
+            {% endif %}
+
+
+        </div>
+        </div>
+        </ul>
+      </div>
+
+
+
+  </nav>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+

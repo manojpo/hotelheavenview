@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> index</title>
+{% endblock%}
+{% block content%}
+
+<section class="site-hero overlay" alt="Responsive image" data-stellar-background-ratio="0.5" style="background:url({% static 'images/lroombanner.jpg'%})  center/cover; ">
+    <div class="container-fluid">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-12 text-center">
+        <div class="mb-5 element-animate fadeInUp element-animated">
+            <h1 style="color:red; font-family:fantasy;">Welcome To Our Hotel Heaven View International</h1>
+                <p style="font-weight: bold; color: #20c997">Discover our world's #1 rooms and hospality.</p>
+                    <p><a href="{% url 'booking' %}" class="btn btn-outline-success btn-lg font-weight-bold">Book Now</a></p>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+  <div class="container">
+    <header class=" headinginfo my-4">
+      <h1 class="display-3">Make A Visit and Find</h1>
+      <h3 class="lead">We heartly welcome our guest and visitor across the world</h3>
+    </header>
+    <div class="row text-center">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/ab.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey;">
+            <h4 class="card-title" >Home</h4>
+            <p class="card-text"> We are feeling great to make our guest comfortable and providing the services.Heaven view international welcome's you</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'home' %}" class="btn btn-primary">Visit Home</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6 mb-4" >
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/lroom1.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Rooms</h4>
+            <p class="card-text">World class rooms and beds has been servicing since 2001. We are glad that our guest has been making themselves comfortable</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'booking' %}" class="btn btn-primary">Select Rooms</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/contact3.png' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Contact US</h4>
+            <p class="card-text">Wants to leave a message! Contact us for more detail and information.</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'contact' %}" class="btn btn-primary">Contact Detail</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/about1.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">About US</h4>
+            <p class="card-text">See more about us and find yourself because we are here because of you and our family.</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'about' %}" class="btn btn-primary">Find More</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/blog.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Blog</h4>
+            <p class="card-text">Our blog and daily content. You might like it </p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'blog' %}" class="btn btn-primary">View Blog</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/first1.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Back To landing</h4>
+            <p class="card-text">Back to landing page?</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'first' %}" class="btn btn-primary">Back to landing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+<style>
+
+  body{
+    background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+.card-body:hover {
+  color: #6610f2;
+}
+  .card:hover{
+       z-index: 0.4;
+    transform: scale(1.01);
+
+    box-shadow: 0 25px 40px rgba(63,63,191,0);
+  }
+
+
+
+</style>
+
+{%endblock%}

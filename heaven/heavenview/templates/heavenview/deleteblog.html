@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+
+    <div class="container mt-5">
+        <div  class=" card col-md-12 mt-5 ">
+        <form method="POST" enctype="multipart/form-data">
+            <h3><a style="font-family: sans-serif; text-align: center">Are you sure you want to delete this Blog?</a></h3>
+            <p style="font-family: sans-serif">Blog Name: {{ blog.name }}</p>
+            <P style="font-family: sans-serif">Blog Content:{{blog.content}}</P>
+            <p><img src="{{ blog.image_url }}" alt=""> </p>
+            {% csrf_token %}
+             {{form.media}}
+
+           <p style="text-align: center"><button class="btn btn-danger mb-lg-5" type="submit" onclick="return confirm('are you sure to delete the blog?')">Delete</button>
+           </p></form>
+        </div>
+    </div>
+<br>
+<br>
+<br><br><br>
+<br>
+<br>
+<br>
+
+{% endblock  %}
